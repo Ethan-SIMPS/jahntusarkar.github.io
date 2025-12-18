@@ -251,21 +251,50 @@ details summary {
 }
 
 /* =========================
-   CONTACT
+   CONTACT / SOCIALS (UPDATED)
 ========================= */
 .socials {
-  margin-top: 20px;
+  margin-top: 26px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .socials a {
-  margin-right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(56, 189, 248, 0.08);
   color: var(--accent);
+  font-size: 18px;
   text-decoration: none;
-  font-weight: 600;
+
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
 }
 
 .socials a:hover {
-  text-decoration: underline;
+  transform: translateY(-4px);
+  background: var(--accent);
+  color: #020617;
+
+  box-shadow:
+    0 16px 40px rgba(56, 189, 248, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* =========================
@@ -308,5 +337,15 @@ footer {
   .stats-list {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .socials {
+    gap: 14px;
+  }
+
+  .socials a {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
   }
 }
